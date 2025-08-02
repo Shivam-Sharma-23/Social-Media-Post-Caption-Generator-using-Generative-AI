@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Post & Caption Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="main-layout">
+    <!-- Form Section -->
+    <div class="form-section glass-card">
+      <h1><i class="fas fa-bolt"></i>Post & Caption Wizard</h1>
+      <form id="aiForm">
+        <div class="input-group">
+          <label for="platform">Platform</label>
+          <select id="platform">
+            <option value="Instagram">Instagram</option>
+            <option value="Twitter">Twitter</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Facebook">Facebook</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="tone">Tone</label>
+          <select id="tone">
+            <option value="Casual">Casual</option>
+            <option value="Professional">Professional</option>
+            <option value="Funny">Funny</option>
+            <option value="Inspirational">Inspirational</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="content">Describe Your Idea</label>
+          <textarea id="content" placeholder="E.g., Launching a product, celebrating Diwali..." rows="4"></textarea>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="generateImage" />
+          <label for="generateImage">Generate an image</label>
+        </div>
+
+        <button type="submit" class="glow-button">Generate</button>
+      </form>
+
+      <div id="loading" class="loading">✨ Generating...</div>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-section glass-card" id="output">
+      <h2><i class="fas fa-scroll"></i> Your Generated Post</h2>
+      <p id="resultText"></p>
+      <img id="generatedImage" class="generated-img" src="" alt="" style="display:none;">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
